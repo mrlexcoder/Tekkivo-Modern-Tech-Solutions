@@ -1,0 +1,8 @@
+{
+  "name": "Copy of Tekkivo - Premium Web Solutions & Templates",
+  "description": "A high-end marketplace for website templates, themes, and pre-made premium websites with admin panels, featuring AI-driven project consultations.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
