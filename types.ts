@@ -12,13 +12,15 @@ export interface Product {
   features: string[];
   hasAdminPanel: boolean;
   isPopular?: boolean;
+  subCategory?: string;
 }
 
 export interface NavLink {
   label: string;
   href: string;
+  icon?: string;
   children?: {
     title: string;
-    items: { label: string; href: string; icon?: string }[];
+    items: { label: string; href: string; icon?: string; description?: string }[];
   }[];
 }
