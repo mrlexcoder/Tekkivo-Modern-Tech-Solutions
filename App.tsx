@@ -4,9 +4,11 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ProductGrid from './components/ProductGrid';
 import AIConsultant from './components/AIConsultant';
+import VideoSection from './components/VideoSection';
 
 const App: React.FC = () => {
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  // Set light theme as default
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   useEffect(() => {
     if (!isDarkMode) {
@@ -26,6 +28,9 @@ const App: React.FC = () => {
         <Hero />
         <ProductGrid isDark={isDarkMode} />
         <AIConsultant />
+        
+        {/* Video Blog Section */}
+        <VideoSection />
 
         {/* CTA Section */}
         <section className="py-24 px-4">
