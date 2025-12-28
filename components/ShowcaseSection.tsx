@@ -15,6 +15,10 @@ const ShowcaseSection: React.FC<{ isDark: boolean }> = ({ isDark }) => {
 
   const scrollBrands = [...brands, ...brands];
 
+  // More team avatars for the slider
+  const teamIds = [10, 20, 30, 40, 50, 60, 70, 80];
+  const scrollTeam = [...teamIds, ...teamIds];
+
   const showcaseTemplates = [
     { id: 1, title: 'Trusted Residential Cleaning Services', image: 'https://images.unsplash.com/photo-1581578731548-c64695cc6954?auto=format&fit=crop&q=80&w=800' },
     { id: 2, title: 'Studiova Digital Agency', image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800' },
@@ -50,21 +54,26 @@ const ShowcaseSection: React.FC<{ isDark: boolean }> = ({ isDark }) => {
         </div>
       </div>
 
-      {/* Narrative Headline */}
-      <div className="max-w-5xl mx-auto px-4 text-center mb-32">
-        <h2 className={`text-4xl md:text-6xl font-extrabold leading-[1.15] tracking-tight ${isDark ? 'text-white' : 'text-slate-900'}`}>
-          Our flexible team 
-          <span className="inline-flex items-center align-middle mx-6 -space-x-4">
-            {[10, 20, 30, 40].map((id) => (
-              <img 
-                key={id} 
-                src={`https://i.pravatar.cc/120?u=${id}`} 
-                className="w-14 h-14 md:w-20 md:h-20 rounded-full border-4 border-white dark:border-slate-900 shadow-2xl" 
-                alt="team" 
-              />
-            ))}
-          </span>
-          has a wide range of skills, combining creativity 🎨 with high-performance utility ✨
+      {/* Narrative Headline with Team Slider */}
+      <div className="max-w-6xl mx-auto px-4 text-center mb-32">
+        <h2 className={`text-4xl md:text-6xl font-extrabold leading-[1.15] tracking-tight flex flex-wrap items-center justify-center gap-y-4 ${isDark ? 'text-white' : 'text-slate-900'}`}>
+          <span>Our flexible team</span>
+          
+          <div className="inline-block relative overflow-hidden h-14 md:h-20 w-48 md:w-80 mx-4 align-middle rounded-full">
+            <div className="absolute inset-0 z-10 bg-gradient-to-r from-[var(--bg-color)] via-transparent to-[var(--bg-color)] pointer-events-none"></div>
+            <div className="flex w-fit items-center gap-4 animate-marquee">
+              {scrollTeam.map((id, i) => (
+                <img 
+                  key={i} 
+                  src={`https://i.pravatar.cc/120?u=${id}`} 
+                  className="w-14 h-14 md:w-20 md:h-20 rounded-full border-4 border-white dark:border-slate-900 shadow-2xl flex-shrink-0" 
+                  alt="team member" 
+                />
+              ))}
+            </div>
+          </div>
+
+          <span>has a wide range of skills, combining creativity 🎨 with high-performance utility ✨</span>
         </h2>
       </div>
 

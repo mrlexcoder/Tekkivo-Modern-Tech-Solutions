@@ -43,35 +43,6 @@ const App: React.FC = () => {
         
         {/* Knowledge Base / Video Blog Section */}
         <VideoSection />
-
-        {/* CTA Section - Standardized Spacing */}
-        <section className="section-py px-4">
-          <div className={`max-w-7xl mx-auto rounded-[40px] p-12 md:p-24 relative overflow-hidden text-center border ${
-            isDarkMode ? 'glass border-indigo-500/20' : 'bg-slate-50 border-slate-200 shadow-2xl'
-          }`}>
-            <div className={`absolute -top-24 -right-24 w-96 h-96 blur-[120px] rounded-full ${isDarkMode ? 'bg-indigo-600/20' : 'bg-indigo-200/50'}`}></div>
-            <div className="relative z-10">
-              <h2 className={`text-4xl md:text-6xl font-extrabold font-heading mb-8 ${isDarkMode ? 'text-white' : 'text-slate-900'}`}>
-                Ready to dominate the <br/><span className="text-indigo-600">Digital Landscape?</span>
-              </h2>
-              <p className={`text-lg md:text-xl mb-12 max-w-2xl mx-auto leading-relaxed ${isDarkMode ? 'text-gray-400' : 'text-slate-600'}`}>
-                Join 5,000+ developers and businesses building high-end experiences with Tekkivo's elite template library.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-6 justify-center">
-                <button className={`px-12 py-5 rounded-2xl font-bold text-lg transition-all hover:-translate-y-1 ${
-                  isDarkMode ? 'bg-white text-slate-900 hover:bg-indigo-500 hover:text-white shadow-xl shadow-white/10' : 'bg-slate-900 text-white hover:bg-indigo-600 shadow-xl shadow-slate-900/20'
-                }`}>
-                  Browse All Themes
-                </button>
-                <button className={`px-12 py-5 rounded-2xl font-bold text-lg border transition-all hover:-translate-y-1 ${
-                  isDarkMode ? 'glass border-white/20 hover:bg-white/10' : 'bg-white border-slate-300 hover:bg-slate-50 text-slate-700'
-                }`}>
-                  Contact Sales
-                </button>
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <footer className={`py-20 border-t ${isDarkMode ? 'glass border-white/10' : 'bg-white border-slate-200'}`}>
