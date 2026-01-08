@@ -7,6 +7,7 @@ import ProductGrid from './components/ProductGrid';
 import FeatureSection from './components/FeatureSection';
 import AIConsultant from './components/AIConsultant';
 import VideoSection from './components/VideoSection';
+import PromotionPopup from './components/PromotionPopup';
 
 const App: React.FC = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
@@ -44,6 +45,9 @@ const App: React.FC = () => {
         {/* Knowledge Base / Video Blog Section */}
         <VideoSection />
       </main>
+
+      {/* Auto Email Capture Popup */}
+      <PromotionPopup isDark={isDarkMode} />
 
       <footer className={`py-20 border-t ${isDarkMode ? 'glass border-white/10' : 'bg-white border-slate-200'}`}>
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
