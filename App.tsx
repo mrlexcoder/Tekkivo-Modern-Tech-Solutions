@@ -1,12 +1,10 @@
 
 import React, { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
 import ShowcaseSection from './components/ShowcaseSection';
 import ProductGrid from './components/ProductGrid';
 import FeatureSection from './components/FeatureSection';
 import AIConsultant from './components/AIConsultant';
-import VideoSection from './components/VideoSection';
 import PromotionPopup from './components/PromotionPopup';
 
 const App: React.FC = () => {
@@ -26,11 +24,8 @@ const App: React.FC = () => {
     <div className={`min-h-screen transition-colors duration-300 ${isDarkMode ? 'selection:bg-indigo-500/30' : 'selection:bg-indigo-100'}`}>
       <Navbar isDark={isDarkMode} onToggleTheme={toggleTheme} />
       
-      <main>
-        {/* Hero Section */}
-        <Hero />
-        
-        {/* Showcase / Brand Slider Section */}
+      <main className="pt-20">
+        {/* Showcase / Brand Slider Section - Now the first section */}
         <ShowcaseSection isDark={isDarkMode} />
 
         {/* Templates Catalog Section */}
@@ -41,9 +36,6 @@ const App: React.FC = () => {
         
         {/* AI Strategy Engine Section */}
         <AIConsultant />
-        
-        {/* Knowledge Base / Video Blog Section */}
-        <VideoSection />
       </main>
 
       {/* Auto Email Capture Popup */}
