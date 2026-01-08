@@ -1,6 +1,5 @@
 
 import React, { useState, useEffect } from 'react';
-import Navbar from './components/Navbar';
 import ShowcaseSection from './components/ShowcaseSection';
 import ProductGrid from './components/ProductGrid';
 import FeatureSection from './components/FeatureSection';
@@ -18,13 +17,14 @@ const App: React.FC = () => {
     }
   }, [isDarkMode]);
 
+  // Keep toggle function logic even if UI button is gone for potential future use/programmatic control
   const toggleTheme = () => setIsDarkMode(!isDarkMode);
 
   return (
     <div className={`min-h-screen transition-colors duration-300 ${isDarkMode ? 'selection:bg-indigo-500/30' : 'selection:bg-indigo-100'}`}>
-      <Navbar isDark={isDarkMode} onToggleTheme={toggleTheme} />
+      {/* Header removed as requested */}
       
-      <main className="pt-20">
+      <main className="pt-10">
         {/* Showcase / Brand Slider Section - Now the first section */}
         <ShowcaseSection isDark={isDarkMode} />
 
